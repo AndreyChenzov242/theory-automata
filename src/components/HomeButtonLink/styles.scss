@@ -1,0 +1,23 @@
+.home-link-button {
+  position: fixed;
+  background-color: #000;
+  color: #fff;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px 0 rgba(186, 186, 186, 0.6);
+  right: 24px;
+  bottom: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.15s ease;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.36);
+    text-decoration: none;
+    color: #fff;
+  }
+}
