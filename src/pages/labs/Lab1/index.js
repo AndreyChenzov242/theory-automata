@@ -44,7 +44,7 @@ const data = [
 ];
 
 export const Lab1 = () => {
-  const [counterSets, setCounterSets] = useState(0);
+  const [counterSets, setCounterSets] = useState("");
 
   let setArray = [];
 
@@ -62,9 +62,6 @@ export const Lab1 = () => {
     setArray[index] = data[index];
   }
 
-  console.log(data[0].name);
-  //   console.log(setArray);
-
   return (
     <div className="lab1 page">
       <ContentWidthLimiter>
@@ -79,12 +76,15 @@ export const Lab1 = () => {
             type="number"
             value={counterSets}
             onChange={handleCounterSets}
+            placeholder="0"
           />
         </div>
 
-        {setArray.map((item) => {
-          return <SetCard name={item.name} />;
-        })}
+        <div className="set-list">
+          {setArray.map((item) => {
+            return <SetCard name={item.name} key={item.name} />;
+          })}
+        </div>
 
         {/* {counterSets && <p>{counterSets}</p>} */}
       </ContentWidthLimiter>

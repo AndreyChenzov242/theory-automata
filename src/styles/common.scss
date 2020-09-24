@@ -1,3 +1,5 @@
+@import "./configs.scss";
+
 .app {
   position: relative;
 }
@@ -34,4 +36,8 @@
 
 .page {
   padding: 48px 0;
+
+  @media screen and (max-width: $breakpoint-down-sm) {
+    padding: 24px 0;
+  }
 }

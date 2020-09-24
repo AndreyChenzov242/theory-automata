@@ -1,3 +1,6 @@
+@import "../../../styles/configs";
+@import "../../../styles/colors";
+
 .lab1 {
   &__title {
     text-align: center;
@@ -6,19 +9,36 @@
   &__counter-sets-wrapper {
     display: flex;
     align-items: center;
+    margin: 12px 0 24px 0;
 
     .counter-sets {
       &__text {
         font-size: 24px;
-        margin: 12px 24px 12px 0;
+        margin-right: 24px;
       }
 
       &__input {
-        width: 100px;
-        border: 1px solid #707070;
+        width: 50px;
+        border: 1px solid $input-color;
         padding: 4px 12px;
         border-radius: 4px;
+        background-color: $input-color;
+        text-align: center;
       }
+    }
+  }
+
+  .set-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+
+    @media screen and (max-width: $breakpoint-down-sm) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (max-width: $breakpoint-down-xs) {
+      grid-template-columns: 1fr;
     }
   }
 }
